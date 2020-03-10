@@ -1,4 +1,9 @@
 def ncr(n, r):
+    if r == 0:
+        return 1
+    if r == 1:
+        return n
+
     # 4c1と4c3は同じなので小さいrを使う
     r = min(r, n - r)
 
@@ -9,11 +14,6 @@ def ncr(n, r):
             x *= n-i
             y *= i+1
         return x // y
-
-    if r == 0:
-        return 1
-    if r == 1:
-        return n
 
     x = list(range(n - r + 1, n + 1))
     y = list(range(1, r+1))
