@@ -104,6 +104,7 @@ def lcm(a0, b0):
         b, a = a0, b0
     if a < 2:
         return b
+
     m = b % a
     while m:
         a, b = m, a
